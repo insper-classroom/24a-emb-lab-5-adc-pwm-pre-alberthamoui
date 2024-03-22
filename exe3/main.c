@@ -16,7 +16,7 @@ int filtroMediaMovel(int newData, int dataBuffer[], int *indexPtr) {
     static int sum = 0;
     sum -= dataBuffer[*indexPtr]; // Tira o valor antigo
     sum += newData; // Adiciona o valor novo
-    dataBuffer[*indexPtr] = newData; // Guarda a soma
+    dataBuffer[*indexPtr] = newData; // Guarda a soma 
     *indexPtr = (*indexPtr + 1) % TAMANHO_JANELA; // Atualiza o índice
     return sum / TAMANHO_JANELA;
 }

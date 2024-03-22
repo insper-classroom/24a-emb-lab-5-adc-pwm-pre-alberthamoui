@@ -25,7 +25,7 @@ void adc_1_task(void *p) {
 }
 
 void adc_2_task(void *p) {
-    adc_init();
+    adc_init(); 
     adc_gpio_init(26);
     // 12-bit conversion, assume max value == ADC_VREF == 3.3 V
     const float conversion_factor = 3.3f / (1 << 12);
